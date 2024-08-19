@@ -101,25 +101,23 @@ function showQuestion() {
 
  // Next Button 
 nextBtn.addEventListener("click",(e)=>{
-  currentQuestionIndex++
   if (currentQuestionIndex < questions.length) {
-    showQuestion()
+    handleNextButton()
   }else{
     startQuiz()
-    showScore()
     console.log("start again");
     
   }
 })
 
-// function handleNextButton(){
-//   currentQuestionIndex++
-//   if (currentQuestionIndex < questions.length) {
-//     showQuestion()
-//   }else{
-//     showScore()
-//   }
-// }
+function handleNextButton(){
+  currentQuestionIndex++
+  if (currentQuestionIndex < questions.length) {
+    showQuestion()
+  }else{
+    showScore()
+  }
+}
 
 function showScore(){
   resetState()
